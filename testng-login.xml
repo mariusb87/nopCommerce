@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Login Suite">
+
+    <parameter name="browser" value="chrome"/>
+
+    <test name="Correct Email and Correct Password">
+
+        <parameter name="test" value="correctCorrect"/>
+        <parameter name="email" value="marius.amz1@yahoo.com"/>
+        <parameter name="password" value="testing123"/>
+
+        <classes>
+            <class name="com.nopcommerce.demo.tests.LoginTest"/>
+        </classes>
+    </test>
+
+    <test name="Correct Email and Wrong Password">
+
+        <parameter name="test" value="correctWrong"/>
+        <parameter name="email" value="marius.amz1@yahoo.com"/>
+        <parameter name="password" value="1234"/>
+
+        <classes>
+            <class name="com.nopcommerce.demo.tests.LoginTest"/>
+        </classes>
+    </test>
+
+    <test name="Wrong Email and Correct Password">
+
+        <parameter name="test" value="wrongCorrect"/>
+        <parameter name="email" value="marius@yahoo.com"/>
+        <parameter name="password" value="testing123"/>
+
+        <classes>
+            <class name="com.nopcommerce.demo.tests.LoginTest"/>
+        </classes>
+    </test>
+
+
+
+</suite>
