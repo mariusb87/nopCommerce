@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Currency Functionality">
+
+    <parameter name="browser" value="chrome"/>
+
+    <test name="Verify Change Currency">
+
+        <parameter name="expectedCurrency" value="€"/>
+
+        <classes>
+            <class name="com.nopcommerce.demo.tests.CurrencyTest"/>
+        </classes>
+    </test>
+
+
+
+</suite>

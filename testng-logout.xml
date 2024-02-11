@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Verify Logout Functionality">
+
+    <parameter name="browser" value="chrome"/>
+
+    <test name="Logout Test">
+
+        <parameter name="email" value="marius.amz1@yahoo.com"/>
+        <parameter name="password" value="testing123"/>
+
+        <classes>
+            <class name="com.nopcommerce.demo.tests.LogoutTest"/>
+        </classes>
+    </test>
+
+
+
+</suite>

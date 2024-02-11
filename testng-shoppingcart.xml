@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Verify Shopping Cart Functionality">
+
+    <parameter name="browser" value="chrome"/>
+
+    <test name="Verify Succes Message and Checkout Button">
+
+        <parameter name="email" value="marius.amz1@yahoo.com"/>
+        <parameter name="password" value="testing123"/>
+        <parameter name="expectedConfirmation" value="The product has been added to your shopping cart"/>
+        <parameter name="expectedCheckout" value="Checkout"/>
+        <parameter name="expectedTitle" value="Shopping cart"/>
+        <parameter name="expectedProductName" value="Lenovo Thinkpad X1 Carbon Laptop"/>
+        <classes>
+            <class name="com.nopcommerce.demo.tests.ShoppingCartTest">
+            <methods>
+                <include name="verifyAddToCartMessage" />
+                <include name="verifyShoppingCartContent" />
+                <include name="verifyCheckout" />
+            </methods>
+        </class>
+        </classes>
+    </test>
+
+
+
+</suite>

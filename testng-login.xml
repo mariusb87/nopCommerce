@@ -1,37 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Login Suite">
+<suite name="Verify Login Functionality">
 
     <parameter name="browser" value="chrome"/>
 
-    <test name="Correct Email and Correct Password">
+    <test name="Valid Credentials Test">
 
-        <parameter name="test" value="correctCorrect"/>
+        <parameter name="testType" value="correctCorrect"/>
         <parameter name="email" value="marius.amz1@yahoo.com"/>
         <parameter name="password" value="testing123"/>
+        <parameter name="expectedResult" value="Login was successful."/>
 
         <classes>
             <class name="com.nopcommerce.demo.tests.LoginTest"/>
         </classes>
     </test>
 
-    <test name="Correct Email and Wrong Password">
+    <test name="Wrong Password Test">
 
-        <parameter name="test" value="correctWrong"/>
+        <parameter name="testType" value="correctWrong"/>
         <parameter name="email" value="marius.amz1@yahoo.com"/>
         <parameter name="password" value="1234"/>
+        <parameter name="expectedResult" value="Login was unsuccessful."/>
 
         <classes>
             <class name="com.nopcommerce.demo.tests.LoginTest"/>
         </classes>
     </test>
 
-    <test name="Wrong Email and Correct Password">
+    <test name="Wrong Email Test">
 
-        <parameter name="test" value="wrongCorrect"/>
+        <parameter name="testType" value="wrongCorrect"/>
         <parameter name="email" value="marius@yahoo.com"/>
         <parameter name="password" value="testing123"/>
+        <parameter name="expectedResult" value="Login was unsuccessful."/>
 
         <classes>
             <class name="com.nopcommerce.demo.tests.LoginTest"/>

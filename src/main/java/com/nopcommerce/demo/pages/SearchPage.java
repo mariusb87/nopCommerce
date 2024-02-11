@@ -1,2 +1,5 @@
-package com.nopcommerce.demo.pages;public class SearcgPage {
+package com.nopcommerce.demo.pages;
+
+public class SearchPage {
+
 }

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Verify Register Functionality">
+
+    <parameter name="browser" value="chrome"/>
+
+    <test name="Existing User Register Test">
+        <parameter name="gender" value="Male"/>
+        <parameter name="firstName" value="Marius"/>
+        <parameter name="lastName" value="Budugan"/>
+        <parameter name="day" value="2"/>
+        <parameter name="month" value="5"/>
+        <parameter name="year" value="1987"/>
+        <parameter name="email" value="marius.amz1@yahoo.com"/>
+        <parameter name="company" value="QA"/>
+        <parameter name="password" value="testing123"/>
+        <parameter name="confirmPassword" value="testing123"/>
+        <parameter name="expectedResult" value="The specified email already exists"/>
+
+        <classes>
+            <class name="com.nopcommerce.demo.tests.RegisterTest"/>
+        </classes>
+    </test>
+</suite>
