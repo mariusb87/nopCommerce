@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestNG All Tests suite"  >
+    <!-- suite name="Suite Name" -->
+    <suite-files>
+        <suite-file path="./testng-register.xml" />
+        <suite-file path="./testng-login.xml" />
+        <suite-file path="./testng-logout.xml" />
+        <suite-file path="./testng-currency.xml" />
+        <suite-file path="./testng-shoppingcart.xml" />
+    </suite-files>
+</suite>

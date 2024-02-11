@@ -14,20 +14,15 @@ public class LoginPage {
     private final By locatorMyAccount = By.xpath("//a[@class='ico-account']");
     private final By locatorLogout = By.xpath("//a[@class='ico-logout']");
 
-    public LoginPage(WebDriver driver) {
-        this.driver = driver;
-    }
-
+    public LoginPage(WebDriver driver) {this.driver = driver;}
     public void doLogin(String username, String password){
         driver.findElement(locatorEmailInput).sendKeys(username);
         driver.findElement(locatorPasswordInput).sendKeys(password);
         driver.findElement(locatorLoginButton).click();
     }
-
     public String getFailedLoginMessage(){
         return driver.findElement(locatorFailedLogin).getText();
     }
-
     public boolean isMyAccountDisplayed(){
         return driver.findElement(locatorMyAccount).isDisplayed();
     }

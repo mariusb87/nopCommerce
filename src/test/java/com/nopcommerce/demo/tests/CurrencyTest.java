@@ -12,13 +12,19 @@ public class CurrencyTest extends BaseTest{
     public void verifyChangeCurrency(String expectedCurrency){
 
         headerPage.clickComputers();
+        Utils.sleep(2000);
         computersPage.clickNotebooks();
+        Utils.sleep(2000);
         headerPage.selectCurrency(Constants.CURRENCY_EURO);
+        Utils.sleep(2000);
+        notebooksPage.scrollToLenovoThinkpad();
+        Utils.sleep(2000);
 
         for (int i=0; i<notebooksPage.getNumberOfProducts(); i++ ){
-            String actualPrice = notebooksPage.getPrices(i);
+            String actualPrice = notebooksPage.getPrice(i);
             System.out.println(actualPrice);
             Assert.assertTrue(actualPrice.contains(expectedCurrency));
         }
+        Utils.sleep(2000);
     }
 }

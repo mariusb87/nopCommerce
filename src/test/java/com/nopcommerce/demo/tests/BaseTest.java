@@ -27,14 +27,12 @@ public class BaseTest {
     @BeforeTest
     @Parameters({"browser"})
     public void setUp(String browser){
-
         switch (browser){
             case "chrome": driver = new ChromeDriver();break;
             case "edge": driver = new EdgeDriver();break;
             case "firefox": driver = new FirefoxDriver();break;
             default: driver = new ChromeDriver();
         }
-
         driver.get(Constants.BASE_URL);
         driver.manage().window().maximize();
 
@@ -46,14 +44,10 @@ public class BaseTest {
         productPage = new ProductPage(driver);
         cartPage = new CartPage(driver);
         checkoutPage = new CheckoutPage(driver);
-
-
     }
-
     @AfterTest(alwaysRun = true)
     public void tearDown(){
         driver.quit();
     }
-
 
 }

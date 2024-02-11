@@ -29,7 +29,6 @@ public class RegisterTest extends BaseTest{
         registerPage.clickRegister();
 
         Assert.assertEquals(registerPage.getActualResult(), expectedResult);
-
         Utils.sleep(3000);
 
     }

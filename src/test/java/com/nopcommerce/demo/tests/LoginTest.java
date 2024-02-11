@@ -19,12 +19,21 @@ public class LoginTest extends BaseTest {
         headerPage.clickLogin();
         loginPage.doLogin(email, password);
 
-        Utils.sleep(3000);
+        Utils.sleep(2000);
 
         switch (testType){
-            case "correctCorrect": Assert.assertTrue(loginPage.isMyAccountDisplayed());break;
-            case "wrongCorrect": Assert.assertTrue(loginPage.getFailedLoginMessage().contains(expectedResult));break;
-            case "correctWrong": Assert.assertTrue(loginPage.getFailedLoginMessage().contains(expectedResult));break;
+            case "correctCorrect":
+                Assert.assertTrue(loginPage.isMyAccountDisplayed());
+                Utils.sleep(1000);
+                break;
+            case "wrongCorrect":
+                Assert.assertTrue(loginPage.getFailedLoginMessage().contains(expectedResult));
+                Utils.sleep(1000);
+                break;
+            case "correctWrong":
+                Assert.assertTrue(loginPage.getFailedLoginMessage().contains(expectedResult));
+                Utils.sleep(1000);
+                break;
         }
     }
 

@@ -5,22 +5,16 @@
 
     <parameter name="browser" value="chrome"/>
 
-    <test name="Verify Succes Message and Checkout Button">
+    <test name="Verify Add to Shopping Cart">
 
         <parameter name="email" value="marius.amz1@yahoo.com"/>
         <parameter name="password" value="testing123"/>
         <parameter name="expectedConfirmation" value="The product has been added to your shopping cart"/>
-        <parameter name="expectedCheckout" value="Checkout"/>
-        <parameter name="expectedTitle" value="Shopping cart"/>
+        <parameter name="expectedCheckoutTitle" value="Checkout"/>
+        <parameter name="expectedCartTitle" value="Shopping cart"/>
         <parameter name="expectedProductName" value="Lenovo Thinkpad X1 Carbon Laptop"/>
         <classes>
-            <class name="com.nopcommerce.demo.tests.ShoppingCartTest">
-            <methods>
-                <include name="verifyAddToCartMessage" />
-                <include name="verifyShoppingCartContent" />
-                <include name="verifyCheckout" />
-            </methods>
-        </class>
+            <class name="com.nopcommerce.demo.tests.ShoppingCartTest"/>
         </classes>
     </test>
 

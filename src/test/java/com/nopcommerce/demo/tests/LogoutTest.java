@@ -14,12 +14,12 @@ public class LogoutTest extends BaseTest{
 
         headerPage.clickLogin();
         loginPage.doLogin(email, password);
-
-        Utils.sleep(3000);
+        Utils.sleep(2000);
 
         loginPage.clickLogout();
 
         Assert.assertTrue(headerPage.isRegisterDisplayed());
+        Utils.sleep(1000);
 
     }
 }

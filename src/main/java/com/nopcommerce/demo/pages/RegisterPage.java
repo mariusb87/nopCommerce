@@ -21,7 +21,6 @@ public class RegisterPage {
     private final By locatorPassword = By.xpath("//input[@id='Password']");
     private final By locatorConfirmPassword = By.xpath("//input[@id='ConfirmPassword']");
     private final By locatorRegisterButton = By.xpath("//button[@id='register-button']");
-
     private final By locatorActualResult = By.xpath("//div[@class='message-error validation-summary-errors']");
 
     public RegisterPage(WebDriver driver) {
@@ -31,9 +30,7 @@ public class RegisterPage {
     public void selectGender(String gender){
         if (gender.toLowerCase().startsWith("m")){
                     driver.findElement(locatorMale).click();
-
         }else if (gender.toLowerCase().startsWith("f")){
-
                     driver.findElement(locatorFemale).click();
         }
     }
