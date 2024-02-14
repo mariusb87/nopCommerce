@@ -12,7 +12,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
-public class BaseTest {
+abstract class BaseTest {
     public static WebDriver driver;
     HeaderPage headerPage;
     RegisterPage registerPage;
